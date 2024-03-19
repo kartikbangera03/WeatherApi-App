@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="index.js" defer></script>
+    <script src="https://kit.fontawesome.com/ae0db5681e.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="mainContainer">
+        <div class="navBar">
+
+            <div class="logoName">
+                <i class="fa-brands fa-pied-piper-alt"></i>
+                <h1>WEATHER.</h1>
+            </div>
+            <form>
+                <div class="searchBar">
+                    <input type="text" id="searchLocation" placeholder="Find Location" autocomplete="off" required>
+                    <button type="submit" id = "searchButton"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    
+                </div>        
+            </form>
+            <span id="errorMsg"></span>
+            <form id="radioForm">
+                <label for="celsius" class="radioLabel">
+                    <input type="radio" id="celsius" name="temperatureUnit" checked="checked">Celsius
+                </label>
+                <label for="farenheit" class="radioLabel">
+                    <input type="radio" id="farenheit" name="temperatureUnit">Farenheit
+                </label>
+                
+            </form>
+        </div>
+        
+
+        <div class="mainCard">
+            <div class="cardLeft">
+                <div class="locationInfo">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <span id="locationName" class = "informationFont"></span>
+                </div>
+
+                <div class="dateTime">
+                    <span id="localDateTime"></span>
+                </div>
+                <div class="temperatureInfo">
+                    <span id="temperature" class="temperatureValue"></span>
+                    <!-- <i class="fa-regular fa-circle"></i> -->
+                </div>
+
+                <div class="informationWords">    
+                    <span id="information" class = "informationFont"></span>
+                </div>
+    
+            </div>
+
+            <div class="cardRight">
+                <div class="rightCardElement">
+                    <i class="fa-solid fa-temperature-three-quarters"></i>
+                    <div class="rightCardContainer">
+                        <span class="rightCardFont">Feels Like </span>
+                        <div class="subcardContainer">
+                            <span id="feelsLike" class = "informationFont temperatureValue"></span>
+                        </div>
+                            
+                       
+                        
+                        
+                    </div>
+                    
+                    
+                </div>
+                <div class="rightCardElement">
+                    <i class="fa-solid fa-smog"></i>
+                    <div class="rightCardContainer">
+                        <span class="rightCardFont">Humidity </span>
+                        <div class="subcardContainer">
+                            <span id="humidity" class = "informationFont"></span>
+                        </div>
+                        
+                        
+                    </div>
+                    
+                </div>
+                <div class="rightCardElement">
+                    <i class="fa-solid fa-water"></i>
+                    <div class="rightCardContainer">
+                        <span class="rightCardFont">Precipitation </span>
+                        <span id="precip" class = "informationFont"> </span>
+                        
+                    </div>
+                    
+                </div>
+                <div class="rightCardElement">
+                    <i class="fa-solid fa-wind"></i>
+                    <div class="rightCardContainer">
+                        <span class="rightCardFont">Wind Speed </span>
+                        <div class="subcardContainer">
+                            <span id="windSpeed" class = "informationFont"></span>
+                        </div>
+                       
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="forecastContainer">
+            <div class="forecastTitle">
+                <span>Weekly Forecast</span>
+                <hr>
+            </div>
+
+            <div class="forcastCardContainer">
+            </div>
+        </div>
+
+      
+
+        
+
+    </div>
+</body>
+</html>
